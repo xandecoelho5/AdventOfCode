@@ -4,9 +4,9 @@ fun main() {
     part2(field).println()
 }
 
-fun part1(lines: List<String>) = lines.countSlopes(3)
+private fun part1(lines: List<String>) = lines.countSlopes(3)
 
-fun part2(lines: List<String>): Int {
+private fun part2(lines: List<String>): Int {
     return lines.countSlopes(1) *
             lines.countSlopes(3) *
             lines.countSlopes(5) *
@@ -14,7 +14,7 @@ fun part2(lines: List<String>): Int {
             lines.countSlopes(1, 2)
 }
 
-fun List<String>.countSlopes(right: Int, down: Int = 1): Int {
+private fun List<String>.countSlopes(right: Int, down: Int = 1): Int {
     var j = 0
     var count = 0
     for (i in indices step down) {
